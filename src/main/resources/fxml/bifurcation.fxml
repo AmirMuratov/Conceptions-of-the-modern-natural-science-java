@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<SplitPane dividerPositions="0.25" prefHeight="457.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BifurcationDiagramController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <FlowPane layoutX="8.0" layoutY="82.0" prefHeight="455.0" prefWidth="230.0"
+                          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                          AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label text="Enter x0:">
+                            <FlowPane.margin>
+                                <Insets left="5.0" top="5.0"/>
+                            </FlowPane.margin>
+                        </Label>
+                        <TextField fx:id="bifx0" text="0.9">
+                            <FlowPane.margin>
+                                <Insets left="5.0" top="5.0"/>
+                            </FlowPane.margin>
+                        </TextField>
+                        <Button fx:id="bifButton" mnemonicParsing="false" onAction="#drawBifurcationDiagram"
+                                text="Draw bifurcation diagram">
+                            <FlowPane.margin>
+                                <Insets left="5.0" top="5.0"/>
+                            </FlowPane.margin>
+                        </Button>
+                    </children>
+                </FlowPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <Canvas fx:id="bifImg" height="450.0" width="570.0" AnchorPane.leftAnchor="0.0"
+                        AnchorPane.topAnchor="0.0"/>
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<SplitPane dividerPositions="0.25" prefHeight="457.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SecondDiagramController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <FlowPane layoutX="-61.0" layoutY="14.0" prefHeight="455.0" prefWidth="161.0"
+                          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                          AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label text="Enter R:"/>
+                        <TextField fx:id="rField" text="3"/>
+                        <Label text="Enter x0:"/>
+                        <TextField text="0.5" fx:id="x0Field"/>
+                        <Button fx:id="plotButton2" mnemonicParsing="false" onAction="#plotSecondDiagram"
+                                text="Button"/>
+                    </children>
+                </FlowPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <Canvas fx:id="canvas" height="400.0" width="600.0" AnchorPane.bottomAnchor="7.0"
+                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>
