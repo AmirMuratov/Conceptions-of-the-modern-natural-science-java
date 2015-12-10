@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class ConvergencePictureController {
 
-    public static double IMAGE_SCALE = 0.1;
+    public static double IMAGE_SCALE = 0.05;
 
     @FXML
     private Canvas convImg;

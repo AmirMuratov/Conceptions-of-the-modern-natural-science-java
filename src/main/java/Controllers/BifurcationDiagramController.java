@@ -20,7 +20,7 @@ public class BifurcationDiagramController {
 
     @FXML
     private void drawBifurcationDiagram() {
-        double from = 1;
+        double from = 0;
         double to = 4;
         double x0 = 0.9;
         try {
@@ -51,7 +51,7 @@ public class BifurcationDiagramController {
 
                 c = 1 / Math.max(c, 1);
                 bifImg.getGraphicsContext2D().getPixelWriter().
-                        setColor(i, j, Color.color(c, c, c));
+                        setColor(i, j, Color.color(c, c, c, 1 - c));
             }
 
         }

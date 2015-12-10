@@ -46,6 +46,9 @@ public class NewtonsPools {
             curX = countPhi(curX);
             i++;
         }
+        res.add(curX);
+        curX = countPhi(curX);
+        res.add(curX);
         if (i == MAX_ITERATIONS) {
             return new ArrayList<>();
         }

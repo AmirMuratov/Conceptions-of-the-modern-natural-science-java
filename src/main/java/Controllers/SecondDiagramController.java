@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import lib.Counter;
 
 import java.util.List;
@@ -45,8 +46,8 @@ public class SecondDiagramController {
 
         private void init() {
             graphicsContext.clearRect(0, 0, width, height);
-            graphicsContext.strokeLine(originX, 0, originX, canvas.getHeight());
-            graphicsContext.strokeLine(0, originY, canvas.getWidth(), originY);
+            //graphicsContext.strokeLine(originX, 0, originX, canvas.getHeight());
+            //graphicsContext.strokeLine(0, originY, canvas.getWidth(), originY);
         }
 
         public void drawLine(double x1, double y1, double x2, double y2) {
@@ -95,10 +96,11 @@ public class SecondDiagramController {
         } catch (NumberFormatException e) {
             return;
         }
-        canvas.getGraphicsContext2D().save();
-        CoordinatesSystem coord = new CoordinatesSystem(canvas, 200, 300, 200, 200);
+        canvas.getGraphicsContext2D().setStroke(Color.BLACK);
+        CoordinatesSystem coord = new CoordinatesSystem(canvas, 213, 288, 207, 180);
         coord.drawLine(-3, -3, 3, 3);
         coord.drawParabola(-3, 3, -r, r, 0);
+        canvas.getGraphicsContext2D().setStroke(Color.RED);
         List<Double> points = Counter.getLinear(x0, r, 100);
         for (int i = 0; i < points.size() - 2; i++) {
             double p1 = points.get(i);
